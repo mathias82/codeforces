@@ -11,6 +11,7 @@ public class IsYourHorseShoe {
     private static int howDoublesShoes(List<Integer> input){
 
         Map<Integer,Integer> map = new HashMap<>();
+        int count = 0;
 
         for (int i=0; i<input.size(); i++){
 
@@ -18,16 +19,7 @@ public class IsYourHorseShoe {
                 map.put(input.get(i),1);
             } else {
 
-                map.put(input.get(i),map.get(input.get(i))+1);
-            }
-        }
-
-        int count=0;
-        for (int values : map.values()){
-
-            while (values > 1){
-                count++;
-                values--;
+               count++;
             }
         }
 
