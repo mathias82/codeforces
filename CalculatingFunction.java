@@ -10,14 +10,11 @@ public class CalculatingFunction {
         Scanner scanner = new Scanner(System.in);
         BigInteger input = scanner.nextBigInteger();
 
-            if (input.mod(BigInteger.valueOf(2)).equals(BigInteger.ZERO)){
-                input = input.divide(BigInteger.valueOf(2));
+        if (!input.mod(BigInteger.valueOf(2)).equals(BigInteger.ZERO)) {
 
-            } else {
-
-                input = input.add(BigInteger.valueOf(1)).negate();
-                input = input.divide(BigInteger.valueOf(2));
-            }
+            input = input.add(BigInteger.valueOf(1)).negate();
+        }
+        input = input.divide(BigInteger.valueOf(2));
 
 
         System.out.println(input);
