@@ -25,7 +25,7 @@ public class AmusingJoke {
 
         for (int j=0; j<26; j++){
 
-            if (word[j] > 0 || word[j] < 0){
+            if (word[j] != 0){
                 return false;
             }
         }
