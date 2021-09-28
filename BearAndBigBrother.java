@@ -22,7 +22,6 @@ public class BearAndBigBrother {
                 break;
             }
         }
-
         System.out.println(years);
     }
 }
