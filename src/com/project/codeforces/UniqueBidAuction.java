@@ -22,7 +22,7 @@ public class UniqueBidAuction {
         for (Map.Entry<Integer,Integer> a : map.entrySet()){
 
             if (a.getValue() == 1 && num>a.getKey()){
-                num = Integer.parseInt(String.valueOf(a.getKey()));
+                num = a.getKey();
             }
         }
         int j=1;
