@@ -9,10 +9,6 @@ public class StringGeneration {
         StringBuilder stringBuilder = new StringBuilder();
         StringBuilder result = new StringBuilder();
 
-        if (K==1 && N==4){
-            return "acba";
-        }
-
         for (int i=1; i<=K; i++){
             stringBuilder.append("a");
         }
