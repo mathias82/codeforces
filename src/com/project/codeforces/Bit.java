@@ -16,6 +16,7 @@ public class Bit {
             list.add(scanner.next());
         }
 
+
         int x = 0;
 
         for (int i=0; i<list.size(); i++) {
