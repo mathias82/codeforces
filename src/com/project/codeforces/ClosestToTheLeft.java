@@ -2,30 +2,25 @@ package com.project.codeforces;
 
 import java.util.Scanner;
 
-public class BinarySearch {
+public class ClosestToTheLeft {
 
-    private static String binarySearch(int[] input, int target){
+    private static int closestToTheLeft(int[] input, int target){
 
-        int right=input.length;
-        int left=-1;
+        int right=input.length-1;
+        int left=0;
 
-        while (left+1<right){
+        while (left<=right){
 
-            int mid = (right+left)/2;
+            int mid = left + ((right-left)/2);
 
             if (input[mid] <= target){
-                left = mid;
-
-                if (input[left] == target){
-                    return "YES";
-                }
-
+                left = mid + 1;
             } else {
-                right = mid;
+                right = mid - 1;
             }
         }
 
-        return "NO";
+        return left;
     }
 
     public static void main(String[] args) {
@@ -43,7 +38,7 @@ public class BinarySearch {
 
         while (k-->0){
             int target = scanner.nextInt();
-            System.out.println(binarySearch(input,target));
+            System.out.println(closestToTheLeft(input,target));
         }
 
     }
